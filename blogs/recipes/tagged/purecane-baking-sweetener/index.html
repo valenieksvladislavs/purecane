@@ -678,7 +678,7 @@
         --color-image-overlay: #000;
         --opacity-image-overlay: 0.25;
         --theme-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.07);
-        --arrow-select-box: url(//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/ar-down.svg?v=92728264558441377851678725199); /* FONT SIZES */
+        --arrow-select-box: url(/images/ar-down.svg); /* FONT SIZES */
         --font-base-size: 16;
         --font-btn-size: 16px;
         --font-btn-weight: 700;
@@ -694,8 +694,8 @@
         --font-h5-mobile: 20;
         --font-h6-desktop: 21;
         --font-h6-mobile: 19;
-        --arrow-down-url: url(//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/arrow-down.svg?v=157552497485556416461678725199);
-        --arrow-down-white-url: url(//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/arrow-down-white.svg?v=70535736727834135531678725199);
+        --arrow-down-url: url(/images/arrow-down.svg);
+        --arrow-down-white-url: url(/images/arrow-down-white.svg);
         --product-title-line-clamp: unset; /* BUTTON 1 */
         --btn1-font: "Libre Franklin";
         --btn1-font-weight: 600;
@@ -950,22 +950,22 @@
 <script>
       (function () {
         var scripts = [
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.baseline.en.f8423b4aeafd3581e601.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~Information~NoAddressLocation~Payment~PostPurchase~Review~Shipping~ShopPay~Sho~cf13f96e.baseline.en.8d3a709bcf8c04f77ed7.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.baseline.en.935f71e1b5e37b1a673d.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment.baseline.en.e38e94a10255bd8dac2c.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.baseline.en.3c067bc64a64a71ff5ad.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.baseline.en.26a0342d355a675e2801.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.baseline.en.1188b9033722bc012e84.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~app.baseline.en.4e70883e139eb5a799c1.js",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.baseline.en.d102fc12c433371f18b0.js",
+          "/js/runtime.baseline.en.f8423b4aeafd3581e601.js",
+          "/js/checkout-web-packages~Information~NoAddressLocation~Payment~PostPurchase~Review~Shipping~ShopPay~Sho~cf13f96e.baseline.en.8d3a709bcf8c04f77ed7.js",
+          "/js/Information~Payment~ShopPay.baseline.en.935f71e1b5e37b1a673d.js",
+          "/js/Information~Payment.baseline.en.e38e94a10255bd8dac2c.js",
+          "/js/Information.baseline.en.3c067bc64a64a71ff5ad.js",
+          "/js/checkout-web-ui~app.baseline.en.26a0342d355a675e2801.js",
+          "/js/vendors~app.baseline.en.1188b9033722bc012e84.js",
+          "/js/checkout-web-packages~app.baseline.en.4e70883e139eb5a799c1.js",
+          "/js/app.baseline.en.d102fc12c433371f18b0.js",
         ];
         var styles = [
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.baseline.en.ba7746e3965877991bae.css",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.baseline.en.954db6995929b6f1f646.css",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.baseline.en.dd733f21b66b59afc26d.css",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.baseline.en.9f248e42bf2a8151ea27.css",
-          "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.baseline.en.6d08f77e3a864d9cf367.css",
+          "/css/checkout-web-ui~app.baseline.en.ba7746e3965877991bae.css",
+          "/css/vendors~app.baseline.en.954db6995929b6f1f646.css",
+          "/css/app.baseline.en.dd733f21b66b59afc26d.css",
+          "/css/Information~Payment~ShopPay.baseline.en.9f248e42bf2a8151ea27.css",
+          "/css/Information.baseline.en.6d08f77e3a864d9cf367.css",
         ];
 
         function prefetch(url, as, callback) {
@@ -1129,7 +1129,7 @@
                 null != e.querySelector(t) &&
                 ((e = o.createElement("script")).setAttribute(
                   "src",
-                  "https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.6/index.js",
+                  "/js/index.js",
                 ),
                 o.body.appendChild(e),
                 o.removeEventListener("focus", n, !0),
@@ -1410,18 +1410,18 @@
                   app_name: "storefront",
                   context_url: window.location.href,
                   source_url:
-                    "https://cdn.shopify.com/s/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js",
+                    "/js/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js",
                 },
               );
             };
             scriptFallback.async = true;
             scriptFallback.src =
-              "https://cdn.shopify.com/s/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js";
+              "/js/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js";
             first.parentNode.insertBefore(scriptFallback, first);
           };
           script.async = true;
           script.src =
-            "https://cdn.shopify.com/s/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js";
+            "/js/trekkie.storefront.144c9c0d827c884b75ff3515cb639eb5627ce766.min.js";
           first.parentNode.insertBefore(script, first);
         };
         trekkie.load({
@@ -1529,7 +1529,7 @@
         var eventsListenerScript = document.createElement("script");
         eventsListenerScript.async = true;
         eventsListenerScript.src =
-          "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js";
+          "/js/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js";
         document
           .getElementsByTagName("head")[0]
           .appendChild(eventsListenerScript);
@@ -1554,7 +1554,7 @@
         window.BOOMR.themeId = 121647530083;
         window.BOOMR.renderRegion = "gcp-us-central1";
         window.BOOMR.url =
-          "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
+          "/js/shopify-boomerang-1.0.0.min.js";
         var where =
           document.currentScript || document.getElementsByTagName("script")[0];
         var parentNode = where.parentNode;
@@ -2116,151 +2116,151 @@
       };
       window.themeStyleURLs = {
         beautyApp: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/beauty-app.css?v=82847578434584791931678725199",
+          url: "/css/beauty-app.css",
           required: false,
           afterWindowLoaded: true,
         },
         productTemplate: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/product-template.css?v=82421861694052094971678725199",
+          url: "/css/product-template.css",
           required: false,
           afterWindowLoaded: true,
         },
         collection: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/collection.css?v=19664071535865163461678725199",
+          url: "/css/collection.css",
           required: false,
         },
         customer: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/customer.css?v=6841168452386755501678725199",
+          url: "/css/customer.css",
           required: false,
         },
         swiper: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/swiper.css?v=46012621335562318871678725199",
+          url: "/css/swiper.css",
           required: false,
         },
         cookieConsent: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/cookie-consent.css?v=143901460793712039001678725199",
+          url: "/css/cookie-consent.css",
           required: false,
           afterWindowLoaded: true,
         },
         glightbox: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/glightbox.css?v=109655660882054226981678725199",
+          url: "/css/glightbox.css",
           required: false,
           afterWindowLoaded: true,
         },
         plyr: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/plyr.css?v=52357444004693221791678725199",
+          url: "/css/plyr.css",
           required: false,
           afterWindowLoaded: true,
         },
       };
       window.themeScriptURLs = {
         productTemplate: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/product-template.js?v=118097360385450892921678725199",
+          url: "/js/product-template.js",
           required: false,
           afterWindowLoaded: true,
         },
         collection: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/collection.js?v=11931769771814894241678725199",
+          url: "/js/collection.js",
           required: false,
         },
         customer: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/customer.js?v=137260800348229690151678725199",
+          url: "/js/customer.js",
           required: false,
         },
         recentlyViewed: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/recently-viewed.js?v=80992503594045873761678725199",
+          url: "/js/recently-viewed.js",
           required: false,
         },
         salesNotification: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/sales-notifications.js?v=93450778628115475941678725199",
+          url: "/js/sales-notifications.js",
           required: false,
           afterWindowLoaded: false,
         },
         bundle: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/bundle.js?v=81470466779210457071678725199",
+          url: "/js/bundle.js",
           required: false,
           afterWindowLoaded: false,
         },
         productRecommendations: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/product-recommendations.js?v=120303910933816549611678725199",
+          url: "/js/product-recommendations.js",
           required: false,
           afterWindowLoaded: false,
         },
         luckyWheel: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/lucky-wheel.js?v=82503151344650969941678725199",
+          url: "/js/lucky-wheel.js",
           required: false,
           afterWindowLoaded: false,
         },
         prePurchase: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/pre-purchase.js?v=5521546315545470221678725199",
+          url: "/js/pre-purchase.js",
           required: false,
           afterWindowLoaded: false,
         },
         inCart: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/incart.js?v=9599028754606395521678725199",
+          url: "/js/incart.js",
           required: false,
           afterWindowLoaded: false,
         },
         cartGoal: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/cart-goal.js?v=2834695927567945291678725199",
+          url: "/js/cart-goal.js",
           required: false,
           afterWindowLoaded: false,
         },
         bis: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/bis.js?v=126503790660708961801678725199",
+          url: "/js/bis.js",
           required: false,
           afterWindowLoaded: false,
         },
         quantityDiscount: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/quantity-discount.js?v=93717028903342049231678725199",
+          url: "/js/quantity-discount.js",
           required: false,
           afterWindowLoaded: false,
         },
         popup: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/popup.js?v=7988376773643141521678725199",
+          url: "/js/popup.js",
           required: false,
           afterWindowLoaded: false,
         },
         countdown: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/product-countdown.js?v=120773645471631889001678725199",
+          url: "/js/product-countdown.js",
           required: false,
           afterWindowLoaded: true,
         },
         productQuickView: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/product-quick-view.js?v=50398093259500101191678725199",
+          url: "/js/product-quick-view.js",
           required: true,
           afterWindowLoaded: true,
         },
         tabs: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/tabs.js?v=86801434748735425641678725199",
+          url: "/js/tabs.js",
           required: false,
         },
         cookieConsent: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/cookie-consent.js?v=97662287885215815981678725199",
+          url: "/js/cookie-consent.js",
           required: false,
           afterWindowLoaded: true,
         },
         glightbox: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/glightbox.js?v=150230968466051983311678725199",
+          url: "/js/glightbox.js",
           required: false,
           afterWindowLoaded: true,
         },
         mansory: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/mansory-layout.js?v=175264691519374662331678725199",
+          url: "/js/mansory-layout.js",
           required: false,
           afterWindowLoaded: true,
         },
         plyr: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/plyr.js?v=68356425767129871678725199",
+          url: "/js/plyr.js",
           required: false,
           afterWindowLoaded: true,
         },
         swiper: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/swiper.js?v=66882332398227667391678725199",
+          url: "/js/swiper.js",
           required: false,
         },
         parallax: {
-          url: "//cdn.shopify.com/s/files/1/0274/4044/7587/t/693/assets/simple-parallax.js?v=119078493864148266941678725199",
+          url: "/js/simple-parallax.js",
           required: false,
           afterWindowLoaded: true,
         },
@@ -4431,7 +4431,7 @@
 <section class="section-pv-none" data-parallax="false" data-section-id="template--14439570210915__16547395518df91ec5" data-section-type="hero" id="sf__hero-template--14439570210915__16547395518df91ec5" style="background-color: #ffffff">
 <div class="w-full" style="--content-color: #fffeef">
 <div class="sf-hero sf-hero--small sf-hero--has-overlay" id="sf-hero-template--14439570210915__16547395518df91ec5">
-<div class="sf-hero__bg lazyload js pointer-events-none bg-no-repeat bg-center bg-cover bg-no-repeat" data-bgset="//cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_180x.jpg?v=1667419523 180w 84h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_360x.jpg?v=1667419523 360w 169h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_540x.jpg?v=1667419523 540w 253h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_720x.jpg?v=1667419523 720w 338h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_900x.jpg?v=1667419523 900w 422h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1080x.jpg?v=1667419523 1080w 506h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1296x.jpg?v=1667419523 1296w 608h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1512x.jpg?v=1667419523 1512w 709h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1728x.jpg?v=1667419523 1728w 810h, //cdn.shopify.com/s/files/1/0274/4044/7587/files/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee.jpg?v=1667419523 1920w 900h" data-image-loading="" data-parent-fit="contain" data-sizes="auto" style="background-image: url('/images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_300x.jpg');"></div>
+<div class="sf-hero__bg lazyload js pointer-events-none bg-no-repeat bg-center bg-cover bg-no-repeat" data-bgset="/images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_180x.jpg 180w 84h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_360x.jpg 360w 169h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_540x.jpg 540w 253h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_720x.jpg 720w 338h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_900x.jpg 900w 422h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1080x.jpg 1080w 506h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1296x.jpg 1296w 608h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1512x.jpg 1512w 709h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_1728x.jpg 1728w 810h, /images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee.jpg 1920w 900h" data-image-loading="" data-parent-fit="contain" data-sizes="auto" style="background-image: url('/images/Recipe_Hero_Name_1920_900.psd_0012_pumpkin_cheesecake_1920x_2be5ce8f-6a2a-4508-b134-02fb2de507ee_300x.jpg');"></div>
 <div class="flex sf-hero__inner container-fluid py-24 sf-hero__inner--middle-center">
 <div class="hidden md:block sf-hero__content w-max md:max-w-4xl text-center">
 <h6 class="py-2 mb-4 sf-hero__subtitle" style="color: #fffeef">
