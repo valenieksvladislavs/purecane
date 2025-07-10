@@ -35,7 +35,7 @@ def download_resource(url, folder):
             r.raise_for_status()
             with open(local_path, "wb") as f:
                 f.write(r.content)
-            print(f"Downloaded: {url} -> {local_path}")
+            # print(f"Downloaded: {url} -> {local_path}")
         except Exception as e:
             print(f"Failed: {url} ({e})")
     return local_path
@@ -68,40 +68,12 @@ def replace_links_in_html(html_path):
             changed = True
 
     # <img>, <iframe>, <video>
-    for tag in soup.find_all(['img', 'iframe', 'video']):
-        for attr in ['src', 'data-src']:
-            if tag.has_attr(attr):
-                url = normalize_url(tag[attr])
-                if url.startswith('http'):
-                    folder = get_resource_dir(url)
-                    local_path = download_resource(url, folder)
-                    tag[attr] = make_absolute_path(local_path)
-                    changed = True
-
-    # <source>
-    for tag in soup.find_all('source'):
-        for attr in ['src', 'data-src', 'srcset', 'data-srcset']:
-            if tag.has_attr(attr):
-                urls = [u.strip().split(' ')[0] for u in tag[attr].split(',')]
-                new_urls = []
-                for url in urls:
-                    url = normalize_url(url)
-                    if url.startswith('http'):
-                        folder = get_resource_dir(url)
-                        local_path = download_resource(url, folder)
-                        new_urls.append(make_absolute_path(local_path))
-                    else:
-                        new_urls.append(url)
-                tag[attr] = ', '.join(new_urls)
-                changed = True
-
-    # <div data-bg="...">
-    for tag in soup.find_all(attrs={"data-bg": True}):
-        url = normalize_url(tag['data-bg'])
+    for tag in soup.find_all('img', src=True):
+        url = normalize_url(tag['src'])
         if url.startswith('http'):
             folder = get_resource_dir(url)
             local_path = download_resource(url, folder)
-            tag['data-bg'] = make_absolute_path(local_path)
+            tag['src'] = make_absolute_path(local_path)
             changed = True
 
     # @font-face в <style>
@@ -122,7 +94,7 @@ def replace_links_in_html(html_path):
     if changed:
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(str(soup))
-        print(f"Updated: {html_path}")
+        # print(f"Updated: {html_path}")
 
 
 def find_html_files(root="."):
